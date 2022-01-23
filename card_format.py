@@ -1,8 +1,6 @@
 """
 Formatting deck of cards.
-
 """
-
 
 def add_string(cards):
     """
@@ -23,13 +21,13 @@ def create(r, s):
     return (r, s)
 
 
-def get_rank(card):
+def get_r(cards):
     """
     The value for ranks in deck of cards.
     :param cards: Deck of cards.
     :return: The left-hand side value of cards as a tuple returning suits.
     """
-    return card[0]
+    return cards[0]
 
 
 def get_s(cards):

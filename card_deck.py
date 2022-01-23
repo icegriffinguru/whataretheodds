@@ -4,7 +4,7 @@ Deck of 52 cards created for shuffling and dealing.
 
 import random
 
-import card_deck
+# import card_deck
 import card_format as cf
 
 
@@ -31,25 +31,28 @@ def shuffle_deck(my_decks):
     :param my_decks: To be shuffled deck
     :return A shuffled deck from a randomly generated pile of cards
     """
-    return my_decks.shuffle()
+    random.shuffle(my_decks)
+    return my_decks
 
 
-def deal_cards(shuffled_card_deck):
+def deal_cards(decks, dealCount):
     """
     Dealt deck of cards after deck is shuffled.
     :return: Dealed deck of cards
     """
 
-    deck_shuffling = shuffle_deck()
     dealed_cards = []
-    for deal in range(shuffled_card_deck):
-        taken_card = random.choice(shuffled_deck)
+    for i in range(dealCount):
+        taken_card = random.choice(decks)
         dealed_cards.append(taken_card)
-        shuffled_deck.remove(taken_card)
+        decks.remove(taken_card)
     return dealed_cards
 
 
+# for test purpose
 if __name__ == "__main__":
-    the_cards = deal_cards(2)
-    the_cards
-    shuffled_deck = shuffle_deck()
+    for i in range(11):
+        decks = build_deck()
+        random_decks = shuffle_deck(decks)
+        dealed_cards = deal_cards(random_decks, 5)
+        print(dealed_cards)

@@ -25,7 +25,7 @@ def hand_dealings():
     hand_dealings.shuffle_deck(hands)
     return hands
 
-place in pokers sim
+# place in pokers sim
 
 
 def is_flush(my_hands):
@@ -43,9 +43,8 @@ def is_two_pair(my_hands):
     :return: Two pair card generated from function.
     """
     suits2 = [h[1] for h in my_hands]
-    for card in my_hands
-        get_rank(card)
-
+    # for card in my_hands
+    #     get_rank(card)
 
     rank_deck = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 
@@ -83,7 +82,7 @@ def high_card(my_hands):
     suits2 = [h[1] for h in my_hands]
 # I have no clue.
 
-except statement
+# except statement
 
 if __name__ == "__main__":
     [is_flush(hand) for hand in my_hands]
