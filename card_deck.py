@@ -3,19 +3,17 @@ Deck of 52 cards created for shuffling and dealing.
 """
 
 import random
-
-# import card_deck
 import card_format as cf
 
+ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+suits = ['clubs', 'diamonds', 'hearts', 'spades']
 
 def build_deck():
     """
     Create a deck of cards in 4 suits and 13 ranks.
     :return: Generated ranks and suits added to the empty deck list in the format from card_format file
     """
-
-    ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
-    suits = ['clubs', 'diamonds', 'hearts', 'spades']
+    
     deck = []
     for rank in ranks:
         for suit in suits:
